@@ -1,7 +1,7 @@
 const express = require('express');
 const validate = require('express-validation');
 const controller = require('../../controllers/fact.controller');
-const { authorize, ADMIN, LOGGED_USER } = require('../../middlewares/auth');
+const { authorize, LOGGED_USER } = require('../../middlewares/auth');
 const {
   listFacts,
   createFact,
