@@ -51,9 +51,6 @@ export default function SignUp() {
         wrapperCol={{
           span: 10,
         }}
-        // initialValues={{
-        //   remember: true,
-        // }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
         autoComplete="off"
