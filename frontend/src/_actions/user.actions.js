@@ -11,6 +11,14 @@ export default function useUserActions() {
   const setAuth = useSetRecoilState(authAtom);
   const setUsers = useSetRecoilState(usersAtom);
 
+  function saveFact(text) {
+    return fetchWrapper.post(`${baseUrl}/v1/facts`, { text, animal: 'cat' })
+      .then(() => {})
+      .catch((error) => {
+        message.error(error);
+      });
+  }
+
   function login(email, password) {
     return fetchWrapper.post(`${baseUrl}/v1/auth/login`, { email, password })
       .then((user) => {
@@ -74,5 +82,6 @@ export default function useUserActions() {
     logout,
     getAll,
     register,
+    saveFact,
   };
 }
