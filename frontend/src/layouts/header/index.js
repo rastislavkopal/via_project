@@ -23,6 +23,7 @@ export default function CustomHeader() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto" activeKey={location.pathname}>
             <Nav.Link as={Link} to="/" active={location.pathname === '/'}>Home</Nav.Link>
+            <Nav.Link as={Link} to="/docs" active={location.pathname === 'docs'}>Docs</Nav.Link>
             <Nav.Link as={Link} to="/dashboard" active={location.pathname === 'dashboard'}>Dashboard</Nav.Link>
           </Nav>
           <Nav activeKey={location.pathname}>
@@ -36,6 +37,7 @@ export default function CustomHeader() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto" activeKey={location.pathname}>
             <Nav.Link as={Link} to="/" active={location.pathname === '/'}>Home</Nav.Link>
+            <Nav.Link as={Link} to="/docs" active={location.pathname === 'docs'}>Docs</Nav.Link>
           </Nav>
           <Nav activeKey={location.pathname}>
             <Nav.Link as={Link} active={location.pathname === '/sign-in'} to="/sign-in">Sign In</Nav.Link>
